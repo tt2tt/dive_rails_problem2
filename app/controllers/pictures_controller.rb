@@ -23,10 +23,14 @@ class PicturesController < ApplicationController
   end
 
   def update
-    @picture = current_user.pictures.build(picture_params)
-    if @picture.save
+    if @picture.update(picture_params)
       redirect_to pictures_path, notice: "編集しました"
     end
+  end
+
+  def destroy
+    @picture.destroy
+    redirect_to pictures_path, notice: "削除しました"
   end
 
   private
