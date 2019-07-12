@@ -9,6 +9,12 @@ class PicturesController < ApplicationController
     @picture = Picture.new
   end
 
+  def show
+  end
+
+  def edit
+  end
+
   def create
     @picture = current_user.pictures.build(picture_params)
     if @picture.save
@@ -16,10 +22,11 @@ class PicturesController < ApplicationController
     end
   end
 
-  def show
-  end
-
-  def edit
+  def update
+    @picture = current_user.pictures.build(picture_params)
+    if @picture.save
+      redirect_to pictures_path, notice: "編集しました"
+    end
   end
 
   private
