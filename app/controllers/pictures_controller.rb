@@ -21,18 +21,23 @@ class PicturesController < ApplicationController
 
   def confirm
     @picture = Picture.new(picture_params)
+    render :new if @picture.invalid?
   end
 
   def create
     @picture = current_user.pictures.build(picture_params)
     if @picture.save
       redirect_to pictures_path, notice: "投稿しました"
+    else
+      render "confirm"
     end
   end
 
   def update
     if @picture.update(picture_params)
       redirect_to pictures_path, notice: "編集しました"
+    else
+      redirect_to edit_picture_path
     end
   end
 
