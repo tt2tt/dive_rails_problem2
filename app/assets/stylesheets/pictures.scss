@@ -1,4 +1,31 @@
 td img{
-  height: 50px;
-  width: auto;
+  height: auto;
+  width: 100%;
 }
+
+// .col-md-6{
+//   width: 100%;
+// }
+//
+// tbody{
+//   width: 100%;
+// }
+//
+table{
+  width: 100%;
+  background-color: #fff;
+}
+
+tbody:last-child{
+  padding-bottom: 3px;
+}
+//
+// tr{
+//   width: 100%;
+// }
+//
+// .contribution{
+//   min-height: 100%;
+//   width: 100%;
+//   background-color: #fff;
+// }

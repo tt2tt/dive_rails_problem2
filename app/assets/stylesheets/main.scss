@@ -26,6 +26,49 @@ header a{
   padding: 20px;
 }
 
+header .operation{
+  margin-left: 15%;
+}
+
+header .user{
+  margin-right: 15%;
+}
+
+header .fa-facebook-square{
+  color: #fff;
+}
+
 .row{
+  height: 100%;
   padding-top: 40px;
+}
+
+.user{
+  float: right;
+}
+
+ul{
+  list-style: none;
+}
+
+ul li{
+  padding: 4px;
+}
+
+.right{
+}
+
+input[type="text"] {
+  width: 300px;
+  height: 40px;
+}
+
+input[type="email"] {
+  width: 300px;
+  height: 40px;
+}
+
+input[type="password"] {
+  width: 300px;
+  height: 40px;
 }

@@ -1,3 +1,26 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.account p{
+  margin: 0;
+  padding-left: 390px;
+}
+
+.account p:first-child{
+  padding-top: 50px;
+}
+
+.account p:last-child{
+  margin-top: 10px;
+}
+
+.profile{
+  padding-top: 80px;
+  margin: 30px auto;
+}
+
+.profile h1{
+  font-size: 60px;
+}
+
+.profile p{
+  padding-top: 20px;
+  font-size: 30px;
+}
