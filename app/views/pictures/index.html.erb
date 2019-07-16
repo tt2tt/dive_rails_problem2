@@ -1,9 +1,8 @@
 <%= render 'left' %>
 
 <div class="main col-md-6">
-  <p id="notice"><%= notice %></p>
   <h1>一覧画面</h1>
-
+<p id="notice"><%= notice %></p>
   <table>
     <thead>
       <tr>
@@ -13,22 +12,22 @@
 
     <tbody>
       <% @pictures.each do |picture| %>
-      <div class="contribution">
-        <td><%=picture.user.name %></td>
-      </div>
-      <tr class="contribution">
-        <td><%= picture.content %></td>
-      </tr>
-      <tr class="contribution">
-        <td><%= image_tag (picture.image.url) if picture.image && picture.image.url %></td>
-      </tr>
-      <tr class="contribution">
-        <td>
-          <%= link_to '詳細', picture %>
-          <%= link_to '編集', edit_picture_path(picture) %>
-          <%= link_to '削除', picture, method: :delete, data: { confirm: '本当に削除しますか?' } %>
-        </td>
-      </tr>
+        <div class="contribution">
+          <td><%=picture.user.name %></td>
+        </div>
+        <tr class="contribution">
+          <td><%= picture.content %></td>
+        </tr>
+        <tr class="contribution">
+          <td><%= image_tag (picture.image.url) if picture.image && picture.image.url %></td>
+        </tr>
+        <tr class="contribution">
+          <td>
+            <%= link_to '詳細', picture %>
+            <%= link_to '編集', edit_picture_path(picture) %>
+            <%= link_to '削除', picture, method: :delete, data: { confirm: '本当に削除しますか?' } %>
+          </td>
+        </tr>
       <% end %>
     </tbody>
   </table>
