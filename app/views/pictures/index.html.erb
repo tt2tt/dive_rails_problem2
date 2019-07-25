@@ -11,9 +11,9 @@
 
     <tbody>
       <% @pictures.each do |picture| %>
-        <div class="contribution">
+        <tr class="contribution">
           <td><%=picture.user.name %></td>
-        </div>
+        </tr>
         <tr class="contribution">
           <td><%= picture.content %></td>
         </tr>
